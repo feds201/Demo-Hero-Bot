@@ -21,10 +21,10 @@ namespace Hero_Arcade_Drive {
         static TalonSRX frontRight = new TalonSRX(3);
         static TalonSRX frontLeft = new TalonSRX(4);*/
 
-        static TalonSRX frontLeft = new TalonSRX(5); //5 was 1 before
-        static TalonSRX frontRight = new TalonSRX(2);
-        static TalonSRX backLeft = new TalonSRX(3);
-        static TalonSRX backRight = new TalonSRX(4);
+        static TalonSRX frontLeft = new TalonSRX(10); //5 was 1 before
+        static TalonSRX frontRight = new TalonSRX(20);
+        //static TalonSRX backLeft = new TalonSRX(3);
+        //static TalonSRX backRight = new TalonSRX(4);
 
         static PowerDistributionPanel pdp = new PowerDistributionPanel(0);
 
@@ -85,9 +85,9 @@ namespace Hero_Arcade_Drive {
             backRight.Set(ControlMode.PercentOutput, newRThrot);
             frontRight.Set(ControlMode.PercentOutput, newRThrot);*/
 
-            backLeft.Set(ControlMode.PercentOutput, leftThrot * 0.55);
+            //backLeft.Set(ControlMode.PercentOutput, leftThrot * 0.55);
             frontLeft.Set(ControlMode.PercentOutput, leftThrot * 0.55);
-            backRight.Set(ControlMode.PercentOutput, rightThrot * 0.55);
+            //backRight.Set(ControlMode.PercentOutput, rightThrot * 0.55);
             frontRight.Set(ControlMode.PercentOutput, rightThrot * 0.55);
 
             stringBuilder.Append("\t");
@@ -126,15 +126,15 @@ namespace Hero_Arcade_Drive {
                 //connection_pin.Write(Joy.GetConnectionStatus() == UsbDeviceConnection.Connected);
 
                 //Current Limits 
-	            backRight.ConfigContinuousCurrentLimit(40, 10);
-	            backRight.ConfigPeakCurrentLimit(60, 10);
-	            backRight.ConfigPeakCurrentDuration(400, 10);
-	            backRight.EnableCurrentLimit(true);
+	            //backRight.ConfigContinuousCurrentLimit(40, 10);
+	            //backRight.ConfigPeakCurrentLimit(60, 10);
+	            //backRight.ConfigPeakCurrentDuration(400, 10);
+	            //backRight.EnableCurrentLimit(true);
 
-	            backLeft.ConfigContinuousCurrentLimit(40, 10);
-	            backLeft.ConfigPeakCurrentLimit(60, 10);
-	            backLeft.ConfigPeakCurrentDuration(400, 10);
-	            backLeft.EnableCurrentLimit(true);
+	            //backLeft.ConfigContinuousCurrentLimit(40, 10);
+	            //backLeft.ConfigPeakCurrentLimit(60, 10);
+	            //backLeft.ConfigPeakCurrentDuration(400, 10);
+	            //backLeft.EnableCurrentLimit(true);
 
 	            frontRight.ConfigContinuousCurrentLimit(40, 10);
 	            frontRight.ConfigPeakCurrentLimit(60, 10);
